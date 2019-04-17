@@ -21,8 +21,17 @@ get CPU count
 
 check if user is root
 
-    if [ $EUID -ne 0 ]; then
-        echo "This script must be run as root"
-        exit 1
-    fi
+~~~bash
+if [ $EUID -ne 0 ]; then
+    echo "This script must be run as root"
+    exit 1
+fi
+~~~
 
+~~~bash
+#!/bin/bash
+if ! [ $(id -u) = 0 ]; then
+   echo "I am not root!"
+   exit 1
+fi
+~~~
