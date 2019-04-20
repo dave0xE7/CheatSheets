@@ -30,3 +30,6 @@ Encrypt with Password
 Decrypt with Password
 
     openssl enc -d -aes-256-cbc -in message.enc -out message.txt -pass file:./key.bin
+
+
+use option -W for keys without linebreaks   

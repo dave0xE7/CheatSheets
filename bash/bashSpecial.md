@@ -54,6 +54,12 @@ Set position of the Cursor in a Terminal
     # tput cup $row $col
     tput cup 5 10
 
+Get Size (Lines and Colums) of Terminal Window
+
+    cols=$(tput cols)
+    lines=$(tput lines)
+    echo 'Terminal Size:' $cols $lines
+
 Read Number of Characters
 
     read -n 10
@@ -95,17 +101,43 @@ printf "\e[31mCOLORIZED\e[m\n"
 ~~~
 
 ~~~bash
-for c in {0..200}; do printf "\e["$c"mCOLORIZED\e[m\n"; done;
+for c in {0..200}; do printf "$c \e["$c"mCOLORIZED\e[m\n"; done;
+~~~
+
+~~~bash
+PS1='\e[93m[$(date +%H:%M:%S)]\e[091m[\u\e[91m@\e[91m\h]\e[92m\w\e[097m>\e[00m'
 ~~~
 
 
+### Split a string
+
+~~~bash
+mails=$(echo $IN | tr ";" "\n")
+
+for addr in $mails
+do
+    echo "> [$addr]"
+done
+~~~
+
+### grep condition
+
+    cat work | grep -Po '{.*}'
+    {"id":"3","method":"shellCmd","params":"echo idk","time":"1555745970"}
+    {"id":"4","method":"shellCmd","params":"echo hello world","time":"1555745975"}
+    cat work | grep -Po '{"id":"4".*}'
+    {"id":"4","method":"shellCmd","params":"echo hello world","time":"1555745975"}
+    cat work | grep -Po '{"id":"3".*}'
+    {"id":"3","method":"shellCmd","params":"echo idk","time":"1555745970"}
 
 
+### Array Count
+
+    myarray=("one" "two" "three")
+    echo "${#myarray[@]}"
 
 
-
-
-
+    IFS=', ' read -a array <<< "Paris, France, Europe"; echo "${array[@]}"
 
 
 

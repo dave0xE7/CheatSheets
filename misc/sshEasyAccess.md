@@ -1,13 +1,12 @@
 
 
-using
+## How to use
     
     ssh ld
 
-instead of
+## instead of
 
     ssh -X root@192.168.1.167 -p 2222
-
 
 
 edit the ssh_config
