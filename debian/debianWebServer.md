@@ -27,9 +27,7 @@ Creating a Mysql User and Database
 
     CREATE DATABASE newdb;
     CREATE USER 'username'@'localhost' IDENTIFIED BY 'userpassword';
-    GRANT ALL PRIVILEGES ON newdb.* to 'username'@'localhost';
-    FLUSH PRIVILEGES;
-    quit
+    squit
 
 
 Installing Phpmyadmin for database management

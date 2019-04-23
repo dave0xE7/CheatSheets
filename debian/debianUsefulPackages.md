@@ -6,13 +6,12 @@ apt-get update && apt-get upgrade
 apt-get install 
 
     sudo
-    synaptic
-
     wget curl
-    
+    less
     nano
-
     git
+
+    synaptic
 
     caja caja-common
     pluma pluma-common

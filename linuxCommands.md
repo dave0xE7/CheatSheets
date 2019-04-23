@@ -6,11 +6,6 @@ Change Directory
     cd /home/service/Downloads
     cd ..
 
-Print Working Directory
-
-    pwd
-
-
 
 
 Creating a Symbolic Link

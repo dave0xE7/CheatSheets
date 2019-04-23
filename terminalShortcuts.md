@@ -55,6 +55,8 @@ Search in command history
 
 ### Tab
 
-Autocomplete or show possible results
+Autocomplete or show possible result
+
+
 
 
