@@ -33,3 +33,9 @@ Creating a Mysql User and Database
 Installing Phpmyadmin for database management
 
     apt-get install phpmyadmin
+
+
+Install Full LAMP Stack
+
+    apt-get update -y; apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mariadb-client mariadb-server phpmyadmin -y
+
