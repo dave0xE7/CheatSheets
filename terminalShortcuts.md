@@ -15,7 +15,7 @@ Logout of the Current Terminal
 
 ### Ctrl + L
 
-Creating the Screen
+Clearing the Screen
 
 ### Ctrl + A
 
