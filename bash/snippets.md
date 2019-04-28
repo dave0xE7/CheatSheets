@@ -1,6 +1,6 @@
 
 
-Sending HTTP POST using CURL
+### Sending HTTP POST using CURL
 
     url='http://invidec.net/api.php'
     data='article=1234'
@@ -9,17 +9,17 @@ Sending HTTP POST using CURL
 
 
 
-get Total Memory amount
+### get Total Memory amount
 
     free | grep Mem | awk '{print $2}'
 
 
-get CPU count
+### get CPU count
 
     lscpu | grep ^'CPU(s)' | awk '{print $2}'
 
 
-check if user is root
+### check if user is root
 
 ~~~bash
 if [ $EUID -ne 0 ]; then
@@ -36,7 +36,7 @@ if ! [ $(id -u) = 0 ]; then
 fi
 ~~~
 
-get creation time of file in unixtime
+### get creation time of file in unixtime
 
 ~~~bash
 myTime=$(ls -1 -l --time-style=+%s 1.apk | awk '{print $6}')
@@ -49,31 +49,31 @@ date --date=@$myTime
 
 
 
-Set position of the Cursor in a Terminal
+### Set position of the Cursor in a Terminal
 
     # tput cup $row $col
     tput cup 5 10
 
-Get Size (Lines and Colums) of Terminal Window
+### Get Size (Lines and Colums) of Terminal Window
 
     cols=$(tput cols)
     lines=$(tput lines)
     echo 'Terminal Size:' $cols $lines
 
-Read Number of Characters
+### Read Number of Characters
 
     read -n 10
 
-Read with Timeout
+### Read with Timeout
 
     read -t 3
 
-Read with hidden input
+### Read with hidden input
 
     read -s
 
 
-Show possible completions for a command
+### Show possible completions for a command
 
     # for command
     compgen -bcg
@@ -140,11 +140,11 @@ done
     IFS=', ' read -a array <<< "Paris, France, Europe"; echo "${array[@]}"
 
 
-# create random password
+### create random password
 
     tr -dc A-Za-z0-9_ < /dev/urandom  | head -c12 | xargs
 
-# send notification
+### send notification
 
     notify-send -a "idk" -i "terminal" "ssh access" "user root entered from ip 194.123.125.42"
 
