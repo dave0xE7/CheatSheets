@@ -32,4 +32,18 @@ Decrypt with Password
     openssl enc -d -aes-256-cbc -in message.enc -out message.txt -pass file:./key.bin
 
 
+Generating Sha256 Hash
+
+    openssl sha256 -out publicKeyHash.sha256 publicKey.pem
+
+
+
+Base64 Encrypt
+
+    base64 -w 0
+
 use option -W for keys without linebreaks   
+
+Base64 Decrypt
+
+    base64 -d
