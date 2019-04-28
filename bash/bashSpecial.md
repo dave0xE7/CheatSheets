@@ -140,8 +140,13 @@ done
     IFS=', ' read -a array <<< "Paris, France, Europe"; echo "${array[@]}"
 
 
+# create random password
 
+    tr -dc A-Za-z0-9_ < /dev/urandom  | head -c12 | xargs
 
+# send notification
+
+    notify-send -a "idk" -i "terminal" "ssh access" "user root entered from ip 194.123.125.42"
 
 
 
