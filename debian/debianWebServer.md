@@ -59,3 +59,5 @@ Install Full LAMP Stack
 
     apt-get update -y; apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mariadb-client mariadb-server phpmyadmin -y
 
+Create New Database and User
+    read -p "New Database: " dbname; read -p "New Username: " dbuser; read -p "New Password: " dbpass && echo "CREATE DATABASE $dbname; CREATE USER '$dbuser'@'localhost' IDENTIFIED BY 'userpassword'; GRANT ALL PRIVILEGES ON $dbname.* TO '$dbuser'@'localhost'; FLUSH PRIVILEGES;" | mysql
