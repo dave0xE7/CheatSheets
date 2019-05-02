@@ -150,6 +150,33 @@ done
 
 
 
+### measure disk performance
 
+    echo "writing 1GB of zeros to ./largefile"
+    dd if=/dev/zero of=./largefile bs=1M count=1024
+
+    echo "cleaning cache"
+    sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
+
+    echo "reading whole 1GB ./largefile"
+    dd if=./largefile of=/dev/null bs=4k
+
+    echo "cleaning up"
+    rm -rf ./largefile
+
+
+### get wifi essid
+
+    essid=$(iwconfig wlp5s0 | grep ESSID | grep -Po '".*?[^\\]"')
+    echo ${essid:1:-1}
+
+### check internet connection via http
+
+    status=$(curl -s http://detectportal.firefox.com/success.txt -i)
+    if [ $status == "success" ]; then
+        echo true
+    else
+        echo false
+    fi
 
 
