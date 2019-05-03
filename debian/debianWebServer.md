@@ -24,7 +24,7 @@ Installing PHP 7.2
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
     apt update
     apt install php7.2 php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-mysql php7.2-zip php7.2-fpm php7.2-mbstring
-    apt install libapache2-mod-7.2
+    apt install libapache2-mod-php7.2
 
 Disable PHP 7.0 and Enable PHP 7.2
 
@@ -57,7 +57,9 @@ Installing Phpmyadmin for database management
 
 Install Full LAMP Stack
 
-    apt-get update -y; apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mariadb-client mariadb-server phpmyadmin -y
+    apt-get update -y; apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mariadb-client mariadb-server -y
 
 Create New Database and User
+
     read -p "New Database: " dbname; read -p "New Username: " dbuser; read -p "New Password: " dbpass && echo "CREATE DATABASE $dbname; CREATE USER '$dbuser'@'localhost' IDENTIFIED BY 'userpassword'; GRANT ALL PRIVILEGES ON $dbname.* TO '$dbuser'@'localhost'; FLUSH PRIVILEGES;" | mysql
+

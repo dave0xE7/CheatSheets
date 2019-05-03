@@ -41,24 +41,46 @@ $ sudo nano /etc/tor/torrc
 
 after saving
 
-    $ sudo touch /var/log/tor/notices.log
-    $ chown debian-tor:debian-tor /var/log/tor/notices.log
-    $ sudo service tor restart
+    sudo touch /var/log/tor/notices.log
+    chown debian-tor:debian-tor /var/log/tor/notices.log
+    sudo service tor restart
 
-checking log
+### checking log
 
-    $ sudo nano /var/log/tor/notices.log
+    sudo nano /var/log/tor/notices.log
 
+
+### Reading the hostname of the new hidden service
 
 /var/lib/tor/hs_name_of_my_service/
 <br>
 /var/lib/tor/hs_name_of_my_service/hostname
 
-    $ sudo cat /var/lib/tor/hs_name_of_my_service/hostname
+    sudo cat /var/lib/tor/hs_name_of_my_service/hostname
     nb2tidpl4j4jnoxr.onion
 
 
+### all in one command source
 
+~~~bash
+apt install tor -y;
+cd /etc/tor;
+#mv /etc/tor/torrc /etc/tor/torrc.old;
+#mv torrc torrc.old;
+echo 'Log notice file /var/log/tor/notices.log' > /etc/tor/torrc;
+echo 'HiddenServiceDir /var/lib/tor/first/' >> /etc/tor/torrc;
+echo 'HiddenServicePort 80 127.0.0.1:80' >> /etc/tor/torrc
+touch /var/log/tor/notices.log;
+systemctl restart tor;
+cd /var/lib/tor/first;
+cat hostname
+tail -f /var/log/tor/notices.log;
+
+~~~
+
+### result
+
+    apt install tor -y; mv /etc/tor/torrc /etc/tor/torrc.old; echo 'Log notice file /var/log/tor/notices.log' > /etc/tor/torrc; echo 'HiddenServiceDir /var/lib/tor/first/' >> /etc/tor/torrc; echo 'HiddenServicePort 80 127.0.0.1:80' >> /etc/tor/torrc;
 
 
 
