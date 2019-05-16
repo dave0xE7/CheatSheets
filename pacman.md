@@ -5,6 +5,8 @@
 
     pacman -Syu
 
+### Search for packages
+
 ### Install a Package
 
     pacman -S <package-name>
