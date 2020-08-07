@@ -41,11 +41,8 @@ read $mysqlrootpw
 read -p "database name: " -e -i laravel dbname
 read -p "database username: " -e -i laravel dbuser
 read -p "database password: " -e -i l4R4VelPW dbpass
-database=laravel
-user=laravel
-password=ehdespassword
 
-mysql --user="root" --password="$mysqlrootpw" --execute="CREATE DATABASE $dbname; CREATE USER 'laravel'@'localhost' IDENTIFIED BY 'ehdespassword'; GRANT ALL PRIVILEGES ON laravel.* TO 'laravel'@'localhost'; FLUSH PRIVILEGES;"
+mysql --user="root" --password="$mysqlrootpw" --execute="CREATE DATABASE $dbname; CREATE USER '$dbuser'@'localhost' IDENTIFIED BY '$dbpass'; GRANT ALL PRIVILEGES ON $dbname.* TO '$dbuser'@'localhost'; FLUSH PRIVILEGES;"
 
 echo "<VirtualHost *:80>
 
