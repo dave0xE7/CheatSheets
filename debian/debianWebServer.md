@@ -58,6 +58,8 @@ Installing Phpmyadmin for database management
 Install Full LAMP Stack
 
     apt-get update -y; apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mariadb-client mariadb-server -y
+    
+    apt-get update -y; apt-get install apache2 libapache2-mod-php php php-mysql mariadb-client mariadb-server -y
 
 Create New Database and User
 
