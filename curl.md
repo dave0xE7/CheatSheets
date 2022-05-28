@@ -1,7 +1,6 @@
-
 # curl
 
-### Usage: curl [options...] <url>
+## Usage: curl [options...] <url>
 
     -d, --data <data>   HTTP POST data
     -f, --fail          Fail silently (no output at all) on HTTP errors
@@ -16,11 +15,12 @@
     -v, --verbose       Make the operation more talkative
     -V, --version       Show version number and quit
 
-> This is not the full help, this menu is stripped into categories.
-Use "--help category" to get an overview of all categories.
-For all options use the manual or "--help all".
+    > This is not the full help, this menu is stripped into categories.
+    Use "--help category" to get an overview of all categories.
+    For all options use the manual or "--help all".
 
 ### curl --help all
+
     Usage: curl [options...] <url>
         --abstract-unix-socket <path> Connect via abstract Unix domain socket
         --alt-svc <file name> Enable alt-svc with this cache file

@@ -1,11 +1,14 @@
 
-virsh list -all
+# virsh
 
-# copy domain
-domain='debian9'
-clone='debianCloneA'
-diskBasePath=''
-virsh dumpxml $domain > $domain.xml
+	virsh list -all
 
-diskecho (PathOrigin=$(cat $domain.xml | grep 'source file' | awk -F "'" '{print $2}'{})
-cp $diskPathOrigin $diskBasePath$clone.qcow2heq
+### copy domain
+
+	domain='debian9'
+	clone='debianCloneA'
+	diskBasePath=''
+	virsh dumpxml $domain > $domain.xml
+
+	diskecho (PathOrigin=$(cat $domain.xml | grep 'source file' | awk -F "'" '{print $2}'{})
+	cp $diskPathOrigin $diskBasePath$clone.qcow2heq

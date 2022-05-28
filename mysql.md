@@ -1,19 +1,26 @@
-#using the mysql cli
+# using the mysql commandline client
 
-mysql -u $user -p
+    mysql -u $user -p
 
-mysql --user=finley --password=password db_name
+    mysql --user=finley --password=password db_name
 
+## changeing the password policy
 
+    SHOW VARIABLES LIKE "password_policy%";
 
+    SET GLOBAL validate_password.policy=LOW;
 
+## creating a new user
 
-SHOW VARIABLES LIKE "password_policy%";
+    CREATE USER 'jeffrey'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password1';
 
-SET GLOBAL validate_password.policy=LOW;
+## granting privileges
 
+    GRANT ALL PRIVILEGES ON books.authors TO 'tolkien'@'localhost';
 
-CREATE USER 'jeffrey'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password1';
+## initial setup for new db
 
-GRANT ALL PRIVILEGES ON books.authors  TO 'tolkien'@'localhost';
-
+    CREATE DATABASE newdb;
+    CREATE USER 'username'@'localhost' IDENTIFIED BY 'userpassword';
+    GRANT ALL PRIVILEGES ON newdb.* TO 'username'@'localhost';
+    FLUSH PRIVILEGES;

@@ -24,5 +24,14 @@
 			"~~~"
 		],
 		"description": "Text formatted as Bash Script"
+	},
+	"excute-bash": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			" v('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
 	}
 }
