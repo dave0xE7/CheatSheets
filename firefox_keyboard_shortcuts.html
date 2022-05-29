@@ -1,0 +1,1549 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<title>Firefox Keyboard Shortcuts</title>
+
+
+	<style>
+		body {
+			font-family: Inter, X-LocaleSpecific, sans-serif;
+			font-size: 16px;
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+
+		#doc-content h1,
+		#doc-content h2,
+		#doc-content h3,
+		#doc-content h4,
+		#doc-content h5,
+		#doc-content h6,
+		.document--content h1,
+		.document--content h2,
+		.document--content h3,
+		.document--content h4,
+		.document--content h5,
+		.document--content h6,
+		.forum--entry-content h1,
+		.forum--entry-content h2,
+		.forum--entry-content h3,
+		.forum--entry-content h4,
+		.forum--entry-content h5,
+		.forum--entry-content h6 {
+			margin-top: 1.5em
+		}
+
+		#doc-content h1:first-child,
+		#doc-content h2:first-child,
+		#doc-content h3:first-child,
+		#doc-content h4:first-child,
+		#doc-content h5:first-child,
+		#doc-content h6:first-child,
+		.document--content h1:first-child,
+		.document--content h2:first-child,
+		.document--content h3:first-child,
+		.document--content h4:first-child,
+		.document--content h5:first-child,
+		.document--content h6:first-child,
+		.forum--entry-content h1:first-child,
+		.forum--entry-content h2:first-child,
+		.forum--entry-content h3:first-child,
+		.forum--entry-content h4:first-child,
+		.forum--entry-content h5:first-child,
+		.forum--entry-content h6:first-child {
+			margin-top: 0
+		}
+
+		#doc-content .wiki-image,
+		.document--content .wiki-image,
+		.forum--entry-content .wiki-image {
+			display: inline-block;
+			padding: 5px 0;
+			vertical-align: middle
+		}
+
+		#doc-content .separator,
+		.document--content .separator,
+		.forum--entry-content .separator {
+			border: 0;
+			border-bottom: 1px solid var(--text-color);
+			margin: 16px 0
+		}
+
+		#doc-content ul,
+		.document--content ul,
+		.forum--entry-content ul {
+			list-style: disc;
+			margin: 16px
+		}
+
+		#doc-content ol,
+		.document--content ol,
+		.forum--entry-content ol {
+			list-style: decimal;
+			margin: 16px
+		}
+
+		#doc-content li,
+		.document--content li,
+		.forum--entry-content li {
+			margin-bottom: 8px
+		}
+
+		#doc-content .filepath,
+		.document--content .filepath,
+		.forum--entry-content .filepath {
+			font-style: italic
+		}
+
+		#doc-content .button,
+		#doc-content .key,
+		.document--content .button,
+		.document--content .key,
+		.forum--entry-content .button,
+		.forum--entry-content .key {
+			align-items: center;
+			border: 2px solid #555555;
+			border-radius: 2px;
+			color: #5e5e72;
+			color: var(--color-marketing-gray-07);
+			display: inline-flex;
+			font-family: Metropolis, Inter, X-LocaleSpecific, sans-serif;
+			font-family: var(--heading-alt-font-family);
+			font-size: 14px;
+			font-size: .875rem;
+			font-weight: 700;
+			justify-content: center;
+			padding: 0 16px;
+			text-decoration: none
+		}
+
+		#doc-content .key,
+		.document--content .key,
+		.forum--entry-content .key {
+			font-family: Monaco, Menlo, Ubuntu Mono, Consolas, source-code-pro, monospace;
+			font-family: var(--code-font-family);
+			padding: 0 8px
+		}
+
+		#doc-content .pref,
+		.document--content .pref,
+		.forum--entry-content .pref {
+			border: 1px solid #cdcdd4;
+			border: 1px solid var(--color-marketing-gray-03);
+			padding: 0 2px
+		}
+
+		#doc-content .menu,
+		.document--content .menu,
+		.forum--entry-content .menu {
+			background: #ededf0;
+			background: var(--color-marketing-gray-02);
+			color: #141422;
+			color: var(--color-marketing-gray-10);
+			padding: 2px 4px
+		}
+
+		#doc-content dl,
+		.document--content dl,
+		.forum--entry-content dl {
+			margin: 0 0 16px 24px
+		}
+
+		#doc-content dl dd,
+		.document--content dl dd,
+		.forum--entry-content dl dd {
+			margin-left: 24px
+		}
+
+		#doc-content .youtube-embed,
+		.document--content .youtube-embed,
+		.forum--entry-content .youtube-embed {
+			height: 0;
+			padding-bottom: 56.25%;
+			position: relative
+		}
+
+		#doc-content .youtube-embed iframe,
+		.document--content .youtube-embed iframe,
+		.forum--entry-content .youtube-embed iframe {
+			height: 100%;
+			position: absolute;
+			width: 100%
+		}
+	</style>
+</head>
+
+<body>
+	<article class="wiki-doc container-sm">
+
+
+
+		<section id="doc-content" class="document--content ">
+
+			<p>This article lists keyboard shortcuts in Mozilla Firefox.<span class="for" data-for="linux"> The shortcuts only work if they are not used by the desktop environment or window manager.</span><span class="for" data-for="linux"> If you have enabled Emacs-style text editing shortcuts in GNOME, they will also work in Firefox. When an Emacs text editing shortcut conflicts with the default shortcuts (as occurs with <span class="key">Ctrl</span>+<span class="key">K</span>), the Emacs shortcut will take precedence if focus is inside a text box (which would include the address bar and search bar). In such cases you should use the alternate keyboard shortcut if one is listed below.</span>
+			</p>
+			<ul>
+				<li>For mouse shortcuts, see <a href="/en-US/kb/mouse-shortcuts-perform-common-tasks">this article</a>.
+				</li>
+			</ul>
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+					<li class="toclevel-1"><a href="#w_navigation"><span class="tocnumber">1</span> <span class="toctext">Navigation</span></a></li>
+					<li class="toclevel-1"><a href="#w_current-page"><span class="tocnumber">2</span> <span class="toctext">Current Page</span></a></li>
+					<li class="toclevel-1"><a href="#w_editing"><span class="tocnumber">3</span> <span class="toctext">Editing</span></a></li>
+					<li class="toclevel-1"><a href="#w_search"><span class="tocnumber">4</span> <span class="toctext">Search</span></a></li>
+					<li class="toclevel-1"><a href="#w_windows-tabs"><span class="tocnumber">5</span> <span class="toctext">Windows &amp; Tabs</span></a></li><span class="for" data-for="win,linux">
+						<li class="toclevel-1"><a href="#w_history"><span class="tocnumber">6</span> <span class="toctext">History</span></a></li>
+					</span><span class="for" data-for="mac" style="display: none;">
+						<li class="toclevel-1"><a href="#w_history_2"><span class="tocnumber">7</span> <span class="toctext">History</span></a></li>
+					</span>
+					<li class="toclevel-1"><a href="#w_bookmarks"><span class="tocnumber">8</span> <span class="toctext">Bookmarks</span></a></li>
+					<li class="toclevel-1"><a href="#w_tools"><span class="tocnumber">9</span> <span class="toctext">Tools</span></a></li>
+					<li class="toclevel-1"><a href="#w_pdf-viewer"><span class="tocnumber">10</span> <span class="toctext">PDF Viewer</span></a></li><span class="for" data-for="win,linux"><span class="for" data-for="fx64">
+							<li class="toclevel-1"><a href="#w_miscellaneous"><span class="tocnumber">11</span> <span class="toctext">Miscellaneous</span></a></li>
+						</span></span><span class="for" data-for="mac" style="display: none;"><span class="for" data-for="fx64">
+							<li class="toclevel-1"><a href="#w_miscellaneous_2"><span class="tocnumber">12</span> <span class="toctext">Miscellaneous</span></a></li>
+						</span></span><span class="for" data-for="win,linux"><span class="for" data-for="not fx64" style="display: none;">
+							<li class="toclevel-1"><a href="#w_miscellaneous_3"><span class="tocnumber">13</span> <span class="toctext">Miscellaneous</span></a></li>
+						</span></span><span class="for" data-for="mac" style="display: none;"><span class="for" data-for="not fx64" style="display: none;">
+							<li class="toclevel-1"><a href="#w_miscellaneous_4"><span class="tocnumber">14</span> <span class="toctext">Miscellaneous</span></a></li>
+						</span></span>
+					<li class="toclevel-1"><a href="#w_media-shortcuts"><span class="tocnumber">15</span> <span class="toctext">Media shortcuts</span></a></li><span class="for" data-for="fx64">
+						<li class="toclevel-1"><a href="#w_selection-of-multiple-tabs"><span class="tocnumber">16</span> <span class="toctext">Selection of Multiple Tabs</span></a></li>
+					</span>
+					<li class="toclevel-1"><a href="#w_developer-shortcuts"><span class="tocnumber">17</span> <span class="toctext">Developer shortcuts</span></a></li>
+				</ul>
+			</div>
+			<h1 id="w_navigation">Navigation</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td>Back
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Alt</span> + <span class="key">←</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">←</span><br><span class="key">command</span> + <span class="key">[</span></span><span class="for" data-for="linux"><span class="key">Alt</span> + <span class="key">←</span><br><span class="key">Ctrl</span> + <span class="key">[</span></span><br><span class="key">Backspace</span>*<br>*when <span class="pref">browser.backspace_action</span> is set to <span class="pref">0</span> (as in the <a href="/en-US/kb/about-config-editor-firefox">Configuration Editor</a>), which is not the default.
+						</td>
+					</tr>
+					<tr>
+						<td>Forward
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Alt</span> + <span class="key">→</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">→</span><br><span class="key">command</span> + <span class="key">]</span></span><span class="for" data-for="linux"><span class="key">Alt</span> + <span class="key">→</span><br><span class="key">Ctrl</span> + <span class="key">]</span></span><br><span class="key">Shift</span> + <span class="key">Backspace</span>*<br>*see above.
+						</td>
+					</tr>
+					<tr>
+						<td>Home
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">Home</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">option</span> + <span class="key">home</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open File
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">O</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">O</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Reload
+						</td>
+						<td><span class="key">F5</span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">R</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">R</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Reload (override cache)
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">F5</span><br><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">R</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">R</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Stop
+						</td>
+						<td><span class="key">Esc</span><span class="for" data-for="mac" style="display: none;"><br><span class="key">command</span> + <span class="key">.</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 id="w_current-page">Current Page</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td>Focus Next Link or Input Field
+						</td>
+						<td><span class="key">Tab</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Focus Previous Link or Input Field
+						</td>
+						<td><span class="key">Shift</span> + <span class="key">Tab</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go Down a Screen
+						</td>
+						<td><span class="key">Page Down</span><span class="for" data-for="mac" style="display: none;"><br><span class="key">fn</span> + <span class="key">↓</span></span><br><span class="key">Space bar</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go Up a Screen
+						</td>
+						<td><span class="key">Page Up</span><span class="for" data-for="mac" style="display: none;"><br><span class="key">fn</span> + <span class="key">↑</span></span><br><span class="key">Shift</span> + <span class="key">Space bar</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to Bottom of Page
+						</td>
+						<td><span class="key">End</span><span class="for" data-for="win,linux"><br><span class="key">Ctrl</span> + <span class="key">↓</span></span><span class="for" data-for="mac" style="display: none;"><br><span class="key">command</span> + <span class="key">↓</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to Top of Page
+						</td>
+						<td><span class="key">Home</span><span class="for" data-for="win,linux"><br><span class="key">Ctrl</span> + <span class="key">↑</span></span><span class="for" data-for="mac" style="display: none;"><br><span class="key">command</span> + <span class="key">↑</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Move to Next Frame, Pop-Up
+						</td>
+						<td><span class="key">F6</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Move to Previous Frame, Pop-Up
+						</td>
+						<td><span class="key">Shift</span> + <span class="key">F6</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Print
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">P</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">P</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Save Focused Link
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">option</span> + <span class="key">return</span></span><br> -when <span class="pref">browser.altClickSave</span> is set to <span class="pref">true</span> (as in the <a href="/en-US/kb/about-config-editor-firefox">Configuration Editor</a>), which is not the default.
+						</td>
+					</tr>
+					<tr>
+						<td>Save Page As
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">S</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">S</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/font-size-and-zoom-increase-size-of-web-pages">Zoom In</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">+</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">+</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/font-size-and-zoom-increase-size-of-web-pages">Zoom Out</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">-</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">-</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/font-size-and-zoom-increase-size-of-web-pages">Zoom Reset</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">0</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">0</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 id="w_editing">Editing</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td>Copy
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">C</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">C</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Cut
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">X</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">X</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Delete
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Del</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">delete</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Delete Word to the Left
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Backspace</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Delete Word to the Right
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Del</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go one Word to the Left
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">←</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go one Word to the Right
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">→</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to Beginning of Line
+						</td>
+						<td><span class="key">Home</span><span class="for" data-for="win" style="display: none;"><br><span class="key">Ctrl</span> + <span class="key">↑</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to End of Line
+						</td>
+						<td><span class="key">End</span><span class="for" data-for="win" style="display: none;"><br><span class="key">Ctrl</span> + <span class="key">↓</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to Beginning of Text
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Home</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to End of Text
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">End</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Paste
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">V</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">V</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Paste (as plain text)
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">V</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">V</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Redo
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Y</span><br><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Z</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">Z</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Select All
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">A</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">A</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Undo
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Z</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">Z</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 id="w_search">Search</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+						<th>
+						</th>
+					</tr>
+					<tr>
+						<td>Find in This Page
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">F</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">F</span></span>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Find Again
+						</td>
+						<td><span class="key">F3</span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">G</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">G</span></span>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Find Previous
+						</td>
+						<td><span class="key">Shift</span> + <span class="key">F3</span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">G</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">G</span></span>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Quick Find within link-text only
+						</td>
+						<td><span class="key">'</span>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Quick Find
+						</td>
+						<td><span class="key">/</span>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Close the Find or Quick Find bar
+						</td>
+						<td><span class="key">Esc</span><br> - when the Find or Quick Find bar is focused
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Switch Search Engine
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">↓</span><br><span class="key">Alt</span> + <span class="key">↑</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">option</span> + <span class="key">↓</span><br><span class="key">option</span> + <span class="key">↑</span></span><br> - after you have written something (or pressed <span class="key">↓</span>) in the address bar
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Web Search with Default Search Engine
+						</td>
+						<td>Type <span class="key">?</span> and a space (or only <span class="key">?</span>) into empty Address Bar
+						</td>
+					</tr>
+					<tr>
+						<td>Focus <a href="/en-US/kb/search-firefox-address-bar">Address bar</a> <span class="for" data-for="fx65">for Web Search with Default Search Engine</span>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">K</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">K</span></span><br><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">E</span></span><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">J</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">option</span> + <span class="key">F</span></span><br>- if search bar is not shown
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Focus <a href="/en-US/kb/add-search-bar-firefox-toolbar">Search bar</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">K</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">K</span></span><br><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">E</span></span><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">J</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">option</span> + <span class="key">F</span></span><br>- if search bar is shown
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>Change the Default Search Engine
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">↓</span><br><span class="key">Ctrl</span> + <span class="key">↑</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">↓</span><br><span class="key">command</span> + <span class="key">↑</span></span><br> - in the <a href="/en-US/kb/add-search-bar-firefox-toolbar">Search bar</a> or the Search field of the <a href="/en-US/kb/about-new-tab-page">New Tab</a> page.
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>View menu to switch, add or manage search engines
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">↓</span><br><span class="key">Alt</span> + <span class="key">↑</span><br><span class="key">F4</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">option</span> + <span class="key">↓</span><br><span class="key">option</span> + <span class="key">↑</span></span><br> - when the <a href="/en-US/kb/add-search-bar-firefox-toolbar">Search bar</a> is focused
+						</td>
+						<td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 id="w_windows-tabs">Windows &amp; Tabs</h1>
+			<div class="note">See also <a href="/en-US/kb/tabs-organize-websites-single-window">Use tabs to organize lots of websites in a single window</a>.</div>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td>Close Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">W</span><br><span class="key">Ctrl</span> + <span class="key">F4</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">W</span></span><br>- except for <a href="/en-US/kb/pinned-tabs-keep-favorite-websites-open">Pinned Tabs</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Close Window
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">W</span><br><span class="key">Alt</span> + <span class="key">F4</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">W</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Cycle through Tabs in Recently Used Order
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Tab</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">tab</span></span><br>-if enabled in <span class="for" data-for="win" style="display: none;"><a href="/en-US/kb/tab-preferences-and-settings">Options</a></span><span class="for" data-for="linux,mac"><a href="/en-US/kb/tab-preferences-and-settings">Preferences</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td><span class="for" data-for="win" style="display: none;">Exit</span><span class="for" data-for="linux,mac">Quit</span>
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Q</span></span><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">Q</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">Q</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go one Tab to the Left
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Page Up</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">page up</span><br><span class="key">command</span> + <span class="key">option</span> + <span class="key">←</span></span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Tab</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">shift</span> + <span class="key">tab</span></span>*<br>* see below
+						</td>
+					</tr>
+					<tr>
+						<td>Go one Tab to the Right
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Page Down</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">page down</span><br><span class="key">command</span> + <span class="key">option</span> + <span class="key">→</span></span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Tab</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">tab</span></span>*<br>* if the setting <em>Ctrl+Tab cycles through tabs in recently used order</em> is disabled in <span class="for" data-for="win" style="display: none;"><a href="/en-US/kb/tab-preferences-and-settings">Options</a></span><span class="for" data-for="linux,mac"><a href="/en-US/kb/tab-preferences-and-settings">Preferences</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to Tab 1 to 8
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">1</span> to <span class="key">8</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">1</span> to <span class="key">8</span></span><span class="for" data-for="linux"><span class="key">Alt</span> + <span class="key">1</span> to <span class="key">8</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Go to Last Tab
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">9</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">9</span></span><span class="for" data-for="linux"><span class="key">Alt</span> + <span class="key">9</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Move Tab Left
+						</td>
+						<td><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Page Up</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Move Tab Right
+						</td>
+						<td><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Page Down</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Move Tab to start
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Home</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">home</span></span><br> - requires the currently selected tab to be "in focus" for instance, by hitting <span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">D</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">L</span></span> to focus the address bar, and then <span class="key">Shift</span> + <span class="key">Tab</span> until you reach the browser tab bar.
+						</td>
+					</tr>
+					<tr>
+						<td>Move Tab to end
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">End</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">end</span></span><br> - requires the currently selected tab to be "in focus" for instance, by hitting <span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">D</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">L</span></span> to focus the address bar, and then <span class="key">Shift</span> + <span class="key">Tab</span> until you reach the browser tab bar.
+						</td>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/mute-sound-firefox-tabs">Mute/Unmute Audio</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">M</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">M</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>New Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">T</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">T</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>New Window
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">N</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">N</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>New <a href="/en-US/kb/private-browsing-use-firefox-without-history">Private Window</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">P</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">P</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open Address or Search in New Background Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">Shift</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">option</span> + <span class="key">shift</span> + <span class="key">return</span></span><br> - from address bar
+						</td>
+					</tr>
+					<tr>
+						<td>Open Address or Search in New Foreground Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Alt</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">option</span> + <span class="key">return</span></span><br> - from address bar or Search bar
+						</td>
+					</tr>
+					<tr>
+						<td>Open <span class="for" data-for="fx64">Address or </span>Search in New Window
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Shift</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">shift</span> + <span class="key">return</span></span><br> - from <span class="for" data-for="fx64">address bar or </span>the Search field on the <a href="/en-US/kb/about-new-tab-page">New Tab</a> page
+						</td>
+					</tr>
+					<tr>
+						<td>Open Search in New Background Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">return</span></span><br> - from the Search field on the <a href="/en-US/kb/about-new-tab-page">New Tab</a> page.<br>(see note, below)
+						</td>
+					</tr>
+					<tr>
+						<td>Open Search in New Foreground Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">return</span></span><br> - from the Search field on the <a href="/en-US/kb/about-new-tab-page">New Tab</a> page.<br><strong>Note:</strong> The Foreground and Background Tab shortcuts are switched if the setting <em>When you open a link in a new tab, switch to it immediately</em> is enabled in <span class="for" data-for="win" style="display: none;"><a href="/en-US/kb/tab-preferences-and-settings">Options</a></span><span class="for" data-for="linux,mac"><a href="/en-US/kb/tab-preferences-and-settings">Preferences</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open Focused Bookmark or Link in Current Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">return</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open Focused Bookmark in New Foreground Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">return</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open Focused Bookmark in New Background Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">return</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open Focused Link in New Background Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">return</span></span><br>(see note, below)
+						</td>
+					</tr>
+					<tr>
+						<td>Open Focused Link in New Foreground Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">return</span></span><br><strong>Note:</strong> The Foreground and Background Tab shortcuts are switched if the setting <em>When you open a link in a new tab, switch to it immediately</em> is enabled in <span class="for" data-for="win" style="display: none;"><a href="/en-US/kb/tab-preferences-and-settings">Options</a></span><span class="for" data-for="linux,mac"><a href="/en-US/kb/tab-preferences-and-settings">Preferences</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Open Focused Bookmark or Link in New Window
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Shift</span> + <span class="key">Enter</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">shift</span> + <span class="key">return</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Show All Tabs
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Tab</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">control</span> + <span class="key">shift</span> + <span class="key">tab</span></span><br>- if the setting <em>Ctrl+Tab cycles through tabs in recently used order</em> is enabled in <span class="for" data-for="win" style="display: none;"><a href="/en-US/kb/tab-preferences-and-settings">Options</a></span><span class="for" data-for="linux,mac"><a href="/en-US/kb/tab-preferences-and-settings">Preferences</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Undo Close Tab
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">T</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">T</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Undo Close Window
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">N</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">N</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Moves the URL left or right (if cursor is in the address bar)
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">X</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">X</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="for" data-for="win,linux">
+				<h1 id="w_history">History</h1>
+				<table>
+					<tbody>
+						<tr>
+							<th>Command
+							</th>
+							<th>Shortcut
+							</th>
+						</tr>
+						<tr>
+							<td>History sidebar
+							</td>
+							<td><span class="key">Ctrl</span> + <span class="key">H</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Library window (History)
+							</td>
+							<td><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">H</span>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="/en-US/kb/delete-browsing-search-download-history-firefox">Clear Recent History</a>
+							</td>
+							<td><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Del</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="for" data-for="mac" style="display: none;">
+				<h1 id="w_history_2">History</h1>
+				<table>
+					<tbody>
+						<tr>
+							<th>Command
+							</th>
+							<th>Shortcut
+							</th>
+						</tr>
+						<tr>
+							<td>History sidebar
+							</td>
+							<td><span class="key">command</span> + <span class="key">shift</span> + <span class="key">H</span>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="/en-US/kb/delete-browsing-search-download-history-firefox">Clear Recent History</a>
+							</td>
+							<td><span class="key">command</span> + <span class="key">shift</span> + <span class="key">delete</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h1 id="w_bookmarks">Bookmarks</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td><span class="for" data-for="win,mac" style="display: none;">Bookmark All Tabs</span>
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">D</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">D</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Bookmark This Page
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">D</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">D</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/bookmarks-firefox">Bookmarks</a> sidebar
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">B</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">B</span></span><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">B</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td><span class="for" data-for="fx84">Show/hide the Bookmarks toolbar</span>
+						</td>
+						<td><span class="for" data-for="win,fx84" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">B</span></span><span class="for" data-for="mac,fx84" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">B</span></span><span class="for" data-for="linux,fx84"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">B</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Show All Bookmarks (Library Window)
+						</td>
+						<td><span class="for" data-for="win,fx84" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">O</span></span><span class="for" data-for="win,not fx84" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">B</span></span><span class="for" data-for="mac,fx84" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">O</span></span><span class="for" data-for="mac,not fx84" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">B</span></span><span class="for" data-for="linux,fx84"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">O</span></span><span class="for" data-for="linux,not fx84" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">B</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Show List of All Bookmarks
+						</td>
+						<td><span class="key">Space</span><br>- in Empty Search Field in Bookmarks Library Window or Sidebar.
+						</td>
+					</tr>
+					<tr>
+						<td>Focus Next Bookmark/Folder whose name (or sorted property) starts with a given character or character sequence
+						</td>
+						<td>Type the character or quickly type the character sequence.<br>- in Bookmarks Library, Bookmarks Toolbar, Bookmarks Menu, Bookmarks Sidebar
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 id="w_tools">Tools</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/where-find-and-manage-downloaded-files-firefox">Downloads</a>
+						</td>
+						<td><span class="for" data-for="win" style="display: none;"><span class="key">Ctrl</span> + <span class="key">J</span></span><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Y</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">J</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Add-ons
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">A</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">A</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Toggle Developer Tools
+						</td>
+						<td><span class="key">F12</span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">I</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">alt</span> + <span class="key">I</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Web Console
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">K</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">alt</span> + <span class="key">K</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Inspector
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">C</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">alt</span> + <span class="key">C</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Take a screenshot
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">S</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">S</span></span><br><strong>Note:</strong> This is customizable – click menu <img alt="Fx57menu" class="wiki-image frameless" data-original-src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2017-10-22-15-37-15-18c775.png" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2017-10-22-15-37-15-18c775.png" title="">, open <span class="for" data-for="not fx88" style="display: none;"><span class="menu"><img alt="Fx57Addons-icon" class="wiki-image frameless lazy" data-original-src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2017-10-30-08-25-40-b7327f.png" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/placeholder.688345f843bb37ed.gif" title=""> Add-ons</span></span><span class="for" data-for="fx88"><span class="menu">Add-ons and Themes</span></span>, select <span class="menu">Extensions</span>, open up the <span class="menu"><img alt="Sidebar gear" class="wiki-image frameless" data-original-src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2014-06-04-19-43-30-fae005.png" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2014-06-04-19-43-30-fae005.png" title=""></span> menu at top right of page, then choose <span class="menu">Manage Extension Shortcuts</span>.
+						</td>
+					</tr>
+					<tr>
+						<td>Style Editor
+						</td>
+						<td><span class="key">Shift</span> + <span class="key">F7</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Profiler
+						</td>
+						<td><span class="key">Shift</span> + <span class="key">F5</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Network
+						</td>
+						<td><span class="for" data-for="not fx55" style="display: none;"><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Q</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">alt</span> + <span class="key">Q</span></span></span><span class="for" data-for="fx55"><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">E</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">alt</span> + <span class="key">E</span></span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Responsive Design View
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">M</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">alt</span> + <span class="key">M</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Page Source
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">U</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">U</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Browser Console
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">J</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">shift</span> + <span class="key">J</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="/en-US/kb/firefox-page-info-window">Page Info</a>
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">I</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">I</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 id="w_pdf-viewer">PDF Viewer</h1>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td>Next page
+						</td>
+						<td><span class="key">N</span> or <span class="key">J</span> or <span class="key">→</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Previous page
+						</td>
+						<td><span class="key">P</span> or <span class="key">K</span> or <span class="key">←</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Zoom in
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">+</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">+</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Zoom out
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">-</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">-</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Automatic Zoom
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">0</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">0</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Rotate the document clockwise
+						</td>
+						<td><span class="key">R</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Rotate counterclockwise
+						</td>
+						<td><span class="key">Shift</span> + <span class="key">R</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Switch to Presentation Mode
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">P</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">Alt</span> + <span class="key">P</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Choose Text Selection Tool
+						</td>
+						<td><span class="key">S</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Choose Hand Tool
+						</td>
+						<td><span class="key">H</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Focus the Page Number input box
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">G</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">Alt</span> + <span class="key">G</span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+			</p><span class="for" data-for="fx64">
+				<div class="for" data-for="win,linux">
+					<h1 id="w_miscellaneous">Miscellaneous</h1>
+					<table>
+						<tbody>
+							<tr>
+								<th>Command
+								</th>
+								<th>Shortcut
+								</th>
+							</tr>
+							<tr>
+								<td>Complete .com Address
+								</td>
+								<td><span class="key">Ctrl</span> + <span class="key">Enter</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Delete Selected Autocomplete Entry
+								</td>
+								<td><span class="key">Shift</span> + <span class="key">Del</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Full Screen
+								</td>
+								<td><span class="key">F11</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Menu Bar activation (showing it temporarily when hidden)
+								</td>
+								<td><span class="for" data-for="win" style="display: none;"><span class="key">Alt</span> or <span class="key">F10</span></span><span class="for" data-for="linux"><span class="key">Alt</span> or <span class="key">F10</span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle <a href="/en-US/kb/firefox-reader-view-clutter-free-web-pages">Reader Mode</a>
+								</td>
+								<td><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">R</span></span><span class="for" data-for="win" style="display: none;"><span class="key">F9</span></span>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/en-US/kb/advanced-panel-settings-in-firefox#w_accessibility">Caret Browsing</a>
+								</td>
+								<td><span class="key">F7</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Address Bar
+								</td>
+								<td><span class="key">F6</span><br><span class="key">Alt</span> + <span class="key">D</span><br><span class="key">Ctrl</span> + <span class="key">L</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Search Field in Library
+								</td>
+								<td><span class="key">F6</span><br><span class="key">Ctrl</span> + <span class="key">F</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Stop Autoscroll Mode
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Cancel Drag-and-Drop Operation
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Clear Search Field in Library or Sidebar
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Close a Menu
+								</td>
+								<td><span class="key">Esc</span><span class="for" data-for="win,linux"><br><span class="key">Alt</span><br><span class="key">F10</span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Context Menu
+								</td>
+								<td><span class="key">Shift</span> + <span class="key">F10</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="for" data-for="mac" style="display: none;">
+					<h1 id="w_miscellaneous_2">Miscellaneous</h1>
+					<table>
+						<tbody>
+							<tr>
+								<th>Command
+								</th>
+								<th>Shortcut
+								</th>
+							</tr>
+							<tr>
+								<td>Complete .com Address
+								</td>
+								<td><span class="key">control</span> + <span class="key">return</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Delete Selected Autocomplete Entry
+								</td>
+								<td><span class="key">shift</span> + <span class="key">delete</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Full Screen
+								</td>
+								<td><span class="key">command</span>+<span class="key">Shift</span>+<span class="key">F</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle <a href="/en-US/kb/firefox-reader-view-clutter-free-web-pages">Reader Mode</a>
+								</td>
+								<td><span class="key">command</span>+<span class="key">option</span>+<span class="key">R</span>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/en-US/kb/advanced-panel-settings-in-firefox#w_accessibility">Caret Browsing</a>
+								</td>
+								<td><span class="key">F7</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Address Bar
+								</td>
+								<td><span class="key">F6</span><br><span class="key">command</span> + <span class="key">L</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Search Field in Library
+								</td>
+								<td><span class="key">F6</span><br><span class="key">command</span> + <span class="key">F</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Stop Autoscroll Mode
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Cancel Drag-and-Drop Operation
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Clear Search Field in Library or Sidebar
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Close a Menu
+								</td>
+								<td><span class="key">Esc</span><span class="for" data-for="win,linux"><br><span class="key">Alt</span><br><span class="key">F10</span></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</span><span class="for" data-for="not fx64" style="display: none;">
+				<div class="for" data-for="win,linux">
+					<h1 id="w_miscellaneous_3">Miscellaneous</h1>
+					<table>
+						<tbody>
+							<tr>
+								<th>Command
+								</th>
+								<th>Shortcut
+								</th>
+							</tr>
+							<tr>
+								<td>Complete .com Address
+								</td>
+								<td><span class="key">Ctrl</span> + <span class="key">Enter</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Complete .net Address
+								</td>
+								<td><span class="key">Shift</span> + <span class="key">Enter</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Complete .org Address
+								</td>
+								<td><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">Enter</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Delete Selected Autocomplete Entry
+								</td>
+								<td><span class="key">Del</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Full Screen
+								</td>
+								<td><span class="key">F11</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Menu Bar activation (showing it temporarily when hidden)
+								</td>
+								<td><span class="for" data-for="win" style="display: none;"><span class="key">Alt</span> or <span class="key">F10</span></span><span class="for" data-for="linux"><span class="key">Alt</span> or <span class="key">F10</span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle <a href="/en-US/kb/firefox-reader-view-clutter-free-web-pages">Reader Mode</a>
+								</td>
+								<td><span class="for" data-for="linux"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">R</span></span><span class="for" data-for="win" style="display: none;"><span class="for" data-for="fx60"><span class="key">F9</span></span><span class="for" data-for="not fx60" style="display: none;"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">R</span></span></span>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/en-US/kb/advanced-panel-settings-in-firefox#w_accessibility">Caret Browsing</a>
+								</td>
+								<td><span class="key">F7</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Address Bar
+								</td>
+								<td><span class="key">F6</span><br><span class="key">Alt</span> + <span class="key">D</span><br><span class="key">Ctrl</span> + <span class="key">L</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Search Field in Library
+								</td>
+								<td><span class="key">F6</span><br><span class="key">Ctrl</span> + <span class="key">F</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Stop Autoscroll Mode
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Cancel Drag-and-Drop Operation
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Clear Search Field in Library or Sidebar
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Close a Menu
+								</td>
+								<td><span class="key">Esc</span><span class="for" data-for="win,linux"><br><span class="key">Alt</span><br><span class="key">F10</span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Context Menu
+								</td>
+								<td><span class="key">Shift</span> + <span class="key">F10</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="for" data-for="mac" style="display: none;">
+					<h1 id="w_miscellaneous_4">Miscellaneous</h1>
+					<table>
+						<tbody>
+							<tr>
+								<th>Command
+								</th>
+								<th>Shortcut
+								</th>
+							</tr>
+							<tr>
+								<td>Complete .com Address
+								</td>
+								<td><span class="key">command</span> + <span class="key">return</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Complete .net Address
+								</td>
+								<td><span class="key">shift</span> + <span class="key">return</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Complete .org Address
+								</td>
+								<td><span class="key">command</span> + <span class="key">shift</span> + <span class="key">return</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Delete Selected Autocomplete Entry
+								</td>
+								<td><span class="key">shift</span> + <span class="key">delete</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle Full Screen
+								</td>
+								<td><span class="key">command</span>+<span class="key">Shift</span>+<span class="key">F</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Toggle <a href="/en-US/kb/firefox-reader-view-clutter-free-web-pages">Reader Mode</a>
+								</td>
+								<td><span class="key">command</span>+<span class="key">option</span>+<span class="key">R</span>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/en-US/kb/advanced-panel-settings-in-firefox#w_accessibility">Caret Browsing</a>
+								</td>
+								<td><span class="key">F7</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Address Bar
+								</td>
+								<td><span class="key">F6</span><br><span class="key">command</span> + <span class="key">L</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Focus Search Field in Library
+								</td>
+								<td><span class="key">F6</span><br><span class="key">command</span> + <span class="key">F</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Stop Autoscroll Mode
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Cancel Drag-and-Drop Operation
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Clear Search Field in Library or Sidebar
+								</td>
+								<td><span class="key">Esc</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Close a Menu
+								</td>
+								<td><span class="key">Esc</span><span class="for" data-for="win,linux"><br><span class="key">Alt</span><br><span class="key">F10</span></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</span>
+			<h1 id="w_media-shortcuts">Media shortcuts</h1>
+			<div class="note">See also <a href="/en-US/kb/html5-audio-and-video-firefox">HTML5 audio and video in Firefox</a>.</div>
+			<table>
+				<tbody>
+					<tr>
+						<th>Command
+						</th>
+						<th>Shortcut
+						</th>
+					</tr>
+					<tr>
+						<td>Toggle Play / Pause
+						</td>
+						<td><span class="key">Space bar</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Decrease volume
+						</td>
+						<td><span class="key">↓</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Increase volume
+						</td>
+						<td><span class="key">↑</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Mute audio
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">↓</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">↓</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Unmute audio
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">↑</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">↑</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Seek back 15 seconds
+						</td>
+						<td><span class="key">←</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Seek back 10 %
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">←</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">←</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Seek forward 15 seconds
+						</td>
+						<td><span class="key">→</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Seek forward 10 %
+						</td>
+						<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">→</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">→</span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Seek to the beginning
+						</td>
+						<td><span class="key">Home</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Seek to the end
+						</td>
+						<td><span class="key">End</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="for" data-for="fx64">
+				<h1 id="w_selection-of-multiple-tabs">Selection of Multiple Tabs</h1>
+				<div class="note">These shortcuts require the tab bar to be "in focus." Currently, the only way to do this is to focus an adjacent object and "tab into" the tab bar, for instance, by hitting <span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">L</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">L</span></span> to focus the address bar, and then <span class="key">Shift</span> + <span class="key">Tab</span> repeatedly until the current tab gets a <span class="for" data-for="fx89" style="display: none;">colored border</span><span class="for" data-for="not fx89">dotted rectangle</span>.</div>
+				<table>
+					<tbody>
+						<tr>
+							<th><strong>Command</strong>
+							</th>
+							<th><strong>Shortcut</strong>
+							</th>
+						</tr>
+						<tr>
+							<td>Select left, right, first or last tab. Deselect all other tabs.
+							</td>
+							<td>Arrow Keys<br><span class="key">Home</span><br><span class="key">End</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Move the <span class="for" data-for="fx89" style="display: none;">colored border</span><span class="for" data-for="not fx89">dotted rectangle</span> to left, right, first or last tab.
+							</td>
+							<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span></span> + Arrow&nbsp;Keys<br><span class="for" data-for="win,linux"><span class="key">Ctrl</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span></span> + <span class="key">Home</span><br><span class="for" data-for="win,linux"><span class="key">Ctrl</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span></span> + <span class="key">End</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Select or deselect the tab with the <span class="for" data-for="fx89" style="display: none;">colored border</span><span class="for" data-for="not fx89">dotted rectangle</span>. The other tabs stay selected or deselected.
+							</td>
+							<td><span class="for" data-for="win,linux"><span class="key">Ctrl</span> + <span class="key">Space</span></span><span class="for" data-for="mac" style="display: none;"><span class="key">command</span> + <span class="key">space</span></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h1 id="w_developer-shortcuts">Developer shortcuts</h1>
+			<p>You can also use keyboard shortcuts with developer tools in Firefox. See the <a href="https://developer.mozilla.org/docs/Tools/Keyboard_shortcuts">All Keyboard shortcuts</a> MDN Web Docs page.
+			</p>
+
+		</section>
+
+	</article>
+</body>
+
+</html>
