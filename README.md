@@ -5,3 +5,4 @@
 -   [mysql](mysql.md)
 -   [pct](prxomox/pct_proxmox_lxc.md)
 -   [screen](screen.md)
+-   [lxc](lxc/basic.md)
