@@ -3,7 +3,7 @@
 echo "installing lxc and creating unprivileged containers"
 
 
-sudo apt-get install lxc
+sudo apt-get install lxc -y
 
 lxc-checkconfig
 

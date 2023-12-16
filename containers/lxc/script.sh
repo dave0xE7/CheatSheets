@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+sudo apt-get install lxc -y
+sudo apt-get install lxc-templates -y
+
 lxc-ls -f
 
 

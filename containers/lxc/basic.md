@@ -1,5 +1,10 @@
 
 
+## installing 
+
+sudo apt-get install lxc -y
+sudo apt-get install lxc-templates -y
+
 ## list containers and show information
 lxc-ls -f
 
@@ -11,7 +16,7 @@ lxc-info $NAME
 lxc-stop --name=$NAME
 lxc-destroy --name=$NAME
 
-# common options
+### common options
 
     Usage: lxc-start --name=NAME -- COMMAND
 
